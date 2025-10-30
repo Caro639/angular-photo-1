@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { FaceSnapComponent } from "./face-snap/face-snap.component";
+import { FaceSnap } from "./models/face-snap";
 
 @Component({
   selector: "app-root",
@@ -11,5 +12,15 @@ import { FaceSnapComponent } from "./face-snap/face-snap.component";
   styleUrl: "./app.component.scss",
 })
 export class AppComponent {
-  // title = 'angular-photo-1';
+  mySnap!: FaceSnap;
+
+  ngOnInit() {
+    this.mySnap = new FaceSnap(
+      "Mon premier Ami",
+      "https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg",
+      "Mon premier Ami depuis Angular",
+      new Date(),
+      0
+    );
+  }
 }
