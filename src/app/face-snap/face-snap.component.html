@@ -15,6 +15,12 @@
     <button (click)="onSnap()">
       {{ snapButtonText }}
     </button>
-    💗 {{ faceSnap.snap }}
+    <span
+      [ngStyle]="{
+        color: 'rgb(0, ' + faceSnap.snaps + ', 0)'
+      }"
+    >
+      💗 {{ faceSnap.snaps }}
+    </span>
   </p>
 </div>
