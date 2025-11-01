@@ -9,7 +9,6 @@ import {
   NgStyle,
   TitleCasePipe,
   DatePipe,
-  CurrencyPipe,
 } from "@angular/common";
 
 @Component({
@@ -20,7 +19,6 @@ import {
     NgClass,
     TitleCasePipe,
     DatePipe,
-    CurrencyPipe,
   ],
   templateUrl: "./face-snap.component.html",
   styleUrl: "./face-snap.component.scss",
@@ -35,7 +33,6 @@ export class FaceSnapComponent implements OnInit {
   // imageUrl!: string;
   snapButtonText!: string;
   userHasSnapped!: boolean;
-  myPrice: number = 336.75;
 
   ngOnInit(): void {
     // this.title = "Mon premier Ami";
