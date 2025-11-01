@@ -2,7 +2,13 @@
   class="face-snap-card"
   [ngClass]="{ snapped: userHasSnapped }"
 >
-  <h2>{{ faceSnap.title }}</h2>
+  <h1>
+    {{
+      myPrice
+        | currency : "EUR" : "code" : "1.0-0"
+    }}
+  </h1>
+  <h2>{{ faceSnap.title | titlecase }}</h2>
   @if (faceSnap.location) {
   <p>Localisation 📍 : {{ faceSnap.location }}</p>
   } @else {
@@ -13,7 +19,13 @@
     [alt]="faceSnap.title"
   />
   <p>{{ faceSnap.description }}</p>
-  <p>Créé le : {{ faceSnap.createdAt }}</p>
+  <p>
+    Créé le :
+    {{
+      faceSnap.createdAt
+        | date : "d MMMM yyyy, à HH:mm"
+    }}
+  </p>
   <p>
     <button (click)="onSnap()">
       {{ snapButtonText }}

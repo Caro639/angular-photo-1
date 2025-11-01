@@ -7,12 +7,21 @@ import { FaceSnap } from "../models/face-snap";
 import {
   NgClass,
   NgStyle,
+  TitleCasePipe,
+  DatePipe,
+  CurrencyPipe,
 } from "@angular/common";
 
 @Component({
   selector: "app-face-snap",
   standalone: true,
-  imports: [NgStyle, NgClass],
+  imports: [
+    NgStyle,
+    NgClass,
+    TitleCasePipe,
+    DatePipe,
+    CurrencyPipe,
+  ],
   templateUrl: "./face-snap.component.html",
   styleUrl: "./face-snap.component.scss",
 })
@@ -26,6 +35,7 @@ export class FaceSnapComponent implements OnInit {
   // imageUrl!: string;
   snapButtonText!: string;
   userHasSnapped!: boolean;
+  myPrice: number = 336.75;
 
   ngOnInit(): void {
     // this.title = "Mon premier Ami";
