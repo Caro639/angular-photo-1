@@ -1,3 +1,21 @@
 <header>
   <h1>{{ getTitle() | titlecase }}</h1>
+  <nav>
+    <a
+      routerLink=""
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
+    <a
+      routerLink="facesnaps"
+      routerLinkActive="active"
+      >FaceSnaps</a
+    >
+    <!-- <a
+      routerLink="about"
+      routerLinkActive="active"
+      >About</a
+    > -->
+  </nav>
 </header>
